@@ -5,40 +5,225 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gizlilik Politikası ve Aydınlatma Metni</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #111; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #222; margin-top: 30px; }
-        p, li { color: #444; }
-        .footer { margin-top: 50px; font-size: 0.9em; color: #777; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --accent: #f1f5f9;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #3b82f6;
+                --primary-hover: #60a5fa;
+                --bg: #0f172a;
+                --card-bg: #1e293b;
+                --text-main: #f8fafc;
+                --text-muted: #cbd5e1;
+                --border: #334155;
+                --accent: #334155;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.025em;
+        }
+
+        .meta-info {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: var(--text-muted);
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-family: monospace;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
     </style>
 </head>
 <body>
 
-    <h1>Gizlilik Politikası ve Aydınlatma Metni</h1>
-    <p><strong>Son Güncelleme:</strong> 21 Ekim 2026</p>
+<div class="container">
+    <header>
+        <h1>Gizlilik Politikası ve Aydınlatma Metni</h1>
+        <div class="meta-info">
+            <span><strong>Son Güncelleme:</strong> 29 Ekim 2026</span>
+            <span><strong>E-posta:</strong> <a href="mailto:continental.support@gmail.com">continental.support@gmail.com</a></span>
+        </div>
+    </header>
 
-    <p>Bu Gizlilik Politikası ve Aydınlatma Metni, mobil uygulamamızın kullanıcılarına ait verilerin nasıl işlendiği ve korunduğu hakkında 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ile ABD gizlilik mevzuatları (CCPA, COPPA) uyarınca bilgilendirme amacıyla hazırlanmıştır.</p>
+    <main>
+        <section class="card">
+            <h2>1. Veri Sorumlusu ve İletişim</h2>
+            <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve ilgili yasal mevzuat kapsamında gizlilik ve veri taleplerinizi iletmek için aşağıdaki resmi iletişim kanalını kullanabilirsiniz:</p>
+            <p><strong>E-posta:</strong> <a href="mailto:continental.support@gmail.com">continental.support@gmail.com</a></p>
+        </section>
 
-    <h2>1. Toplanan Veriler ve Veri Sorumlusu</h2>
-    <p>Uygulamamız kullanıcıların gizliliğine azami önem verir. Uygulamamız kapsamında; ad, soyad, e-posta adresi, telefon numarası veya herhangi bir üyelik bilgisi <strong>kesinlikle istenmemekte ve toplanmamaktadır.</strong> Kullanıcı girişi veya kayıt mekanizması bulunmamaktadır.</p>
+        <section class="card">
+            <h2>2. Veri İşleme Prensibi, Yerel Depolama ve Saklama Süresi</h2>
+            <p>Uygulamamız kullanıcıların gizliliğine azami önem verir. Uygulamamız kapsamında ad, soyad, e-posta adresi, telefon numarası veya benzeri doğrudan kimlik belirleyici kişisel bilgiler <strong>sunucularımızda kesinlikle toplanmamaktadır, işlenmemektedir ve depolanmamaktadır.</strong></p>
+            <ul>
+                <li><strong>Cihaz İçi Saklama (<span class="badge">localStorage</span>):</strong> Uygulama içi istatistikleriniz (görüntülenen sözler, favoriler, streak/seri bilgileri), dil tercihiniz, bildirim ayarlarınız (saat, ses, kategori), kalp durumu, haptik titreşim ayarlarınız ve palet seçimleriniz tamamen <strong>yalnızca sizin cihazınızda</strong> yerel olarak saklanır.</li>
+                <li><strong>Veri Tutma ve Silme Süresi:</strong> Cihazınızda <span class="badge">localStorage</span> üzerinde tutulan tüm yerel veriler, siz uygulamayı cihazınızdan kaldırana (silene kadar) veya uygulama verilerini cihaz ayarlarından manuel olarak temizleyene kadar saklanır. Uygulamanın kaldırılması veya verilerin temizlenmesi ile birlikte cihazınızdaki tüm yerel veriler kalıcı olarak silinir. Harici sunucularda veri tutulmadığı için sunucu tabanlı bir saklama süresi bulunmamaktadır.</li>
+            </ul>
+        </section>
 
-    <h2>2. Reklam Hizmetleri ve Üçüncü Taraf İş Ortakları (AdMob)</h2>
-    <p>Uygulamamızın ücretsiz olarak sunulabilmesi ve sürdürülebilirliği amacıyla uygulama içinde Google AdMob reklam eklentisi kullanılmaktadır. Google AdMob, size ilgi alanlarınıza göre reklamlar gösterebilmek amacıyla cihazınıza ait benzersiz reklam kimliklerini (Google Reklam Kimliği - AAID veya Apple Reklam Kimliği - IDFA) ve anonim cihaz bilgilerini işleyebilir.</p>
-    <p>Google'ın bu verileri nasıl kullandığını öğrenmek ve kendi tercihlerinizi yönetmek için <a href="https://support.google.com/ads" target="_blank" rel="noopener">Google Reklam Politikası'nı</a> inceleyebilirsiniz.</p>
+        <section class="card">
+            <h2>3. Kullanılan Üçüncü Taraf SDK'lar, Capacitor Eklentileri ve Onay (Consent) Mekanizması</h2>
+            <p>Uygulamamızın işlevselliğini sağlamak amacıyla cihaz içi yerel eklentiler ve üçüncü taraf servisler kullanılmaktadır:</p>
+            <ul>
+                <li><strong>Google AdMob SDK & Onay Akışı (Consent Flow):</strong> Uygulamanın ücretsiz olarak sunulabilmesi ve sürdürülebilirliği amacıyla Google AdMob kullanılmaktadır. Uygulamamız içerisinde, yasal mevzuatlara (GDPR/KVKK) tam uyum sağlamak amacıyla kullanıcıdan açık onay alan bir <strong>Consent Flow (Onay Mekanizması)</strong> entegre edilmiştir. İlk açılışta veya ayarlar üzerinden bu onay yönetilebilir.</li>
+                <li><strong>Capacitor Yerel Eklentileri:</strong>
+                    <ul>
+                        <li><span class="badge">LocalNotifications</span> (Cihaz içi günlük söz hatırlatıcıları)</li>
+                        <li><span class="badge">Clipboard</span> (Panoya metin kopyalama)</li>
+                        <li><span class="badge">Share</span> (İçerik paylaşım araçları)</li>
+                        <li><span class="badge">Filesystem</span> / <span class="badge">Wallpaper</span> (Cihaz galeri ve duvar kağıdı işlemleri)</li>
+                        <li><span class="badge">Haptics</span> & <span class="badge">Text-to-Speech</span> (Dokunsal geri bildirim ve sesli okuma)</li>
+                    </ul>
+                    <em>(Not: Bu eklentilerin tamamı cihaz içerisinde yerel çalışır; dış sunuculara veri aktarmaz.)</em>
+                </li>
+            </ul>
+        </section>
 
-    <h2>3. Uluslararası Mevzuata Uyum (KVKK, GDPR, CCPA, COPPA)</h2>
-    <ul>
-        <li><strong>KVKK ve GDPR Uyumu:</strong> Uygulamamız doğrudan kimliği belirli veya belirlenebilir gerçek kişilere ait kişisel verileri kendi sunucularında işlemez ve depolamaz.</li>
-        <li><strong>CCPA (California Consumer Privacy Act) Uyumu:</strong> Kullanıcılarımızın kişisel bilgileri üçüncü taraflara satılmamaktadır. Reklam kimliklerinin işlenmesi tamamen anonim reklam gösterimi odaklıdır.</li>
-        <li><strong>COPPA (Çocukların Çevrimiçi Gizliliğini Koruma Yasası) Uyumu:</strong> Uygulamamız 13 yaşın altındaki çocuklardan bilerek ve isteyerek hiçbir kişisel bilgi toplamamaktadır.</li>
-    </ul>
+        <section class="card">
+            <h2>4. AdMob Veri İşleme Detayları</h2>
+            <p>Google AdMob, kişiselleştirilmiş veya genel reklamlar sunabilmek, sahtekarlığı önlemek ve performans ölçümü yapmak amacıyla cihaz reklam kimliğinizi (Google Reklam Kimliği - AAID / Ad ID) işleyebilir.</p>
+            <p>Google'ın reklam teknolojileri vasıtasıyla verileri nasıl topladığını, işlediğini ve kullanıcı tercihlerini nasıl yönetebileceğinizi incelemek için <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Reklam Gizlilik Politikası</a> sayfasını ziyaret edebilirsiniz.</p>
+        </section>
 
-    <h2>4. İletişim</h2>
-    <p>Bu politika metni veya uygulamamızın gizlilik pratikleri hakkında sorularınız için bizimle uygulama mağazası (Google Play / App Store) üzerindeki geliştirici iletişim adresinden iletişime geçebilirsiniz.</p>
+        <section class="card">
+            <h2>5. Kullanıcı Hakları (KVKK ve GDPR Kapsamında)</h2>
+            <p>Uygulamamızda veriler merkezi sunucularda tutulmadığı, tamamen cihazınızdaki yerel alanda (<span class="badge">localStorage</span>) saklandığı için haklarınız doğrudan sizin kontrolünüzdedir:</p>
+            <ul>
+                <li><strong>Erişim ve Düzeltme:</strong> Uygulama içi ayarlar ekranından verilerinizi her zaman görüntüleyebilir ve değiştirebilirsiniz.</li>
+                <li><strong>Silme ve Unutulma Hakkı:</strong> Cihazınızın ayarlarından uygulama verilerini temizleyerek veya uygulamayı telefonunuzdan kaldırarak tüm verilerinizi anında ve kalıcı olarak silebilirsiniz.</li>
+                <li><strong>Resmi Başvurular:</strong> Haklarınızla ilgili her türlü soru veya talep için <a href="mailto:continental.support@gmail.com">continental.support@gmail.com</a> adresine e-posta gönderebilirsiniz.</li>
+            </ul>
+        </section>
 
-    <div class="footer">
-       © 2026 Continental Yazılım - Tüm Hakları Saklıdır.
-    </div>
+        <section class="card">
+            <h2>6. Uluslararası Mevzuata Uyum</h2>
+            <ul>
+                <li><strong>KVKK ve GDPR Uyumu:</strong> Veriler merkezi sunucularda işlenmez; onay mekanizmaları (Consent Flow) aktif olarak uygulanır.</li>
+                <li><strong>CCPA Uyumu:</strong> Kullanıcı bilgileri üçüncü taraflara satılmaz; reklam kimlikleri yalnızca anonim/onaylı reklam gösterimi için işlenir.</li>
+                <li><strong>COPPA (Çocukların Gizliliği) Uyumu:</strong> Uygulamamız 13 yaşın altındaki çocuklardan bilerek ve isteyerek hiçbir kişisel bilgi toplamaz.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>7. Veri Güvenliği Tedbirleri</h2>
+            <p>Verileriniz, işletim sisteminizin sunduğu güvenli ve izole (sandboxed) uygulama depolama alanlarında muhafaza edilir. Sunucu tabanlı bir veri akışı olmadığı için sunucu kaynaklı yetkisiz erişim veya veri ihlali riski bulunmamaktadır.</p>
+        </section>
+
+        <section class="card">
+            <h2>8. İletişim</h2>
+            <p>Bu politika metni veya uygulamamızın gizlilik pratikleri hakkında sorularınız için bizimle e-posta üzerinden iletişime geçebilirsiniz:</p>
+            <p><strong>E-posta:</strong> <a href="mailto:continental.support@gmail.com">continental.support@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tüm Hakları Saklıdır.</p>
+    </footer>
+</div>
 
 </body>
 </html>
